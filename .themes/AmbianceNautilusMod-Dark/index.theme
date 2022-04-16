@@ -1,0 +1,16 @@
+
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=AmbianceNautilusMod-Dark
+Comment=Ubuntu Ambiance theme
+Encoding=UTF-8
+
+
+Name[en_US]=AmbianceNautilusMod-Dark
+
+[X-GNOME-Metatheme]
+GtkTheme=AmbianceNautilusMod-Dark
+MetacityTheme=AmbianceNautilusMod-Dark
+IconTheme=MeliaeSVG
+CursorTheme=DMZ-White
+ButtonLayout=:minimize,maximize,close

@@ -1,0 +1,69 @@
+###############################################################################
+#	PERFORMANCE FIXES
+###############################################################################
+style "performance-fix" 
+{
+        engine "murrine" {
+        #############
+        textstyle = 0
+        #############
+		animation			    = TRUE
+		arrowstyle			    = 1	# Estilo -> triangulos
+		border_shades           = {2.8, 2.8}
+        cellstyle               = 0
+		colorize_scrollbar	    = FALSE
+		contrast			    = 0.5
+        focusstyle              = 2
+        focus_color             = "#4D0000"
+		default_button_color    = "#2E2E2E"
+        expanderstyle           = 2
+		glowstyle			    = 4 # 0 = top, 1 = bottom, 2 = top and bottom, 3 = horizontal, 4 = centered glow
+        glow_shade              = 1.0
+		gradient_shades		    = {1.00, 1.0, 1.0, 1.00}
+		highlight_shade		    = 1.0
+		lightborderstyle	    = 1 # 0 = top side, 1 = all sides
+		lightborder_shade	    = 1.0
+        listviewstyle           = 0
+        menubaritemstyle        = 0 #menuitem look
+        prelight_shade          = 1.0
+        progressbarstyle        = 0 # 0 = no stripes
+        reliefstyle             = 0 # flat
+		roundness			    = 0
+        shadow_shades		    = {1.0, 1.0}
+        scrollbarstyle          = 0
+        separatorstyle          = 1 # smooth separator
+        sliderstyle             = 0
+        trough_border_shades    = { 3.00, 3.00 }
+		trough_shades		    = { 3.0, 3.0 }
+		}
+}
+widget_class "*gtkmm__GtkWindow*" 		style "performance-fix" # Inkscape
+widget_class "*GimpDisplayShell*" 		style "performance-fix" # Gimp
+widget_class "*GimpToolbox*" 			style "performance-fix"
+widget_class "*GimpMenuDock*" 			style "performance-fix"
+widget "*OOoFixed*" 					style "performance-fix" # Openoffice/Libreoffice
+widget_class "*MozContainer*" 			style "performance-fix" # Firefox (Not sure if this one does anything though.)
+###############################################################################
+style "murrinestyle"
+{
+#remove the ugly stipple effect that the pixmap engine causes
+#remove the ugly distortion that the pixmap engine causes on disabled text
+
+        engine "murrine" {}
+}
+class "GtkImage" 											style "murrinestyle"
+class "GtkLabel" 											style "murrinestyle"
+class "GtkComboBox" 										style "murrinestyle"
+class "GtkCellView" 										style "murrinestyle"
+widget_class "*.<GtkButton>.<GtkLabel>" 					style "murrinestyle"
+widget_class "*.<GtkComboBox>.<GtkCellView>" 				style "murrinestyle"
+widget_class "*<GtkImage>*" 								style "murrinestyle"
+widget_class "*.<GtkLabel>" 								style:highest "murrinestyle"
+widget_class "*.<GtkMenuItem>.*" 							style:highest "murrinestyle"
+widget_class "*<GtkMenuBar>*<GtkLabel>*" 					style:highest "murrinestyle"
+widget_class "*CPUFreqApplet*" 								style:highest "murrinestyle"
+widget_class "*<GtkToolbar>*<GtkButton>*<GtkLabel>*" 		style:highest "murrinestyle"
+widget_class "*<GtkToolbar>*<GtkLabel>*" 					style:highest "murrinestyle"
+widget_class "*<GtkButton>*<GtkLabel>*" 					style:highest "murrinestyle"
+widget_class "*MozContainer*" 								style "murrinestyle" # Firefox (Not sure if this one does anything though.)
+###############################################################################

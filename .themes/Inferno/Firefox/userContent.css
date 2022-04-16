@@ -1,0 +1,22 @@
+/*
+
+Inferno
+=======
+
+To be able to visualize the entries that appear dark with illegible text in Firefox:
+
+Copy the contents of this file into your "userContent.css".
+
+In case you do not have it, copy the entire file in:
+/home/"your_user"/.mozilla/firefox/"your_firefox_profile"/chrome/
+
+*/
+
+input,
+textarea,
+select {
+		border-radius: 0px;
+		border-width: 1px !important;
+		background-color: #FFFFFF;
+		color: #EF3E3E; }
+
